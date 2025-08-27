@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Deals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="index.html">Scraping</a>
+        <a href="leads.html">Leads</a>
+        <a href="deals.html" class="active">Deals</a>
+        <a href="proposal.html">Proposal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <form id="dealsForm" class="card">
+        <div class="form-grid">
+
+          <div>
+            <label for="namaklien">Nama Klien</label>
+            <input type="text" id="namaklien" required placeholder="Nama Klien...">
+          </div>
+
+          <div>
+            <label for="product">Product</label>
+            <select id="product" required>
+              <option value="">-- Pilih Produk --</option>
+              <option value="Development for Website - Basic:2000000">Basic Website - IDR 2.000.000</option>
+              <option value="SEO Package:1500000">SEO Package - IDR 1.500.000</option>
+              <option value="Development for Automation Website :5000000">Automation Website - IDR 5.000.000</option>
+            </select>   
+          </div>
+
+          <div>
+            <label for="totalHarga">Total Harga</label>
+            <input type="text" id="totalHarga" readonly placeholder="Total Harga">
+          </div>
+
+          <div>
+            <label for="nomor">Nomor</label>
+            <input type="text" id="nomor" required placeholder="Nomor">
+          </div>
+
+          <div>
+            <label for="namaProperty">Nama Perusahaan</label>
+            <input type="text" id="namaProperty" placeholder="Nama Perushaan">
+          </div>
+
+          <div>
+            <label for="email">Email Klien</label>
+            <input type="email" id="email" placeholder="Email">
+          </div>
+
+          <div>
+            <label for="alamat">Alamat</label>
+            <input type="text" id="alamat" placeholder="Alamat Property">
+          </div>
+
+          <div>
+            <label for="productInitiation">Product Initiation</label>
+            <select id="productInitiation">
+              <option value="No initiation:0">No initiation</option>
+              <option value="Setup Fee Basic:1000000">Setup Fee Basic - IDR 1.000.000</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="durasi">Durasi</label>
+            <input type="text" id="durasi" placeholder="1 Bulan">
+          </div>
+
+          <div>
+            <label for="ketentuan">Ketentuan</label>
+            <input type="text" id="ketentuan" placeholder="Diskon 50%...">
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn-primary">Kirim</button>
+      </form>
+
+
+      <div id="statusMessage" class="msg" style="display:none;"></div>
+      <div id="docsLink" class="msg" style="display:none;"></div>
+      <div id="pdfLink" class="msg" style="display:none;"></div>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="deals.js"></script>
+</body>
+</html>

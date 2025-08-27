@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Leads Baru</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <nav>
+      <a href="index.html">Scraping</a>
+      <a href="Leads.html">Leads</a>
+      <a href="deals.html">Deals</a>
+      <a href="proposal.html">Proposal</a>
+  </nav>
+</header>
+
+  <!-- Form Leads -->
+  <main>
+  <section class="form-container">
+    <form id="leadsForm">
+      <label for="name">Nama Property</label>
+      <input type="text" id="name" placeholder="Nama Property..." required>
+
+      <label for="type">Tipe Property</label>
+      <select id="type" required>
+        <option value="">-- Pilih --</option>
+        <option value="Hotel">Hotel</option>
+        <option value="Villa">Villa</option>
+        <option value="Homestay">Homestay</option>
+      </select>
+
+      <label for="totalRoom">Jumlah Kamar</label>
+      <input type="number" id="totalRoom" placeholder="Total Room" required>
+
+      <label for="pic">PIC Property</label>
+      <input type="text" id="pic" placeholder="Nama Penanggung Jawab" required>
+
+      <label for="email">Email Property</label>
+      <input type="email" id="email" placeholder="Email Property">
+
+      <label for="kontak">Kontak</label>
+      <input type="text" id="kontak" placeholder="Nomor HP / WA..." required>
+
+      <label for="tanggal">Tanggal Inkuiri</label>
+      <input type="date" id="tanggal" required>
+
+      <label for="catatan">Catatan</label>
+      <textarea id="catatan" placeholder="Tambahkan catatan..."></textarea>
+
+      <button type="submit" class="btn-submit">Kirim</button>
+    </form>
+
+    <!-- Tempat pesan dari n8n -->
+    <div id="statusMessage" class="status-message"></div>
+  </section>
+</main>
+
+  <script src="leads.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Scraping Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+    <a href="index.html" class="active" >Scraping</a>
+    <a href="Leads.html">Leads</a>
+    <a href="deals.html">Deals</a>
+    <a href="proposal.html">Proposal</a>
+  </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Scraping Data</h2>
+    <div class="form-box">
+      <input id="name" placeholder="Hotel, Villa, Restaurant ....">
+      <input id="location" placeholder="Bali, Ubud, Jogja ....">
+      <button id="btnCari">Cari</button>
+    </div>
+  </section>
+
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Nama Property</th>
+          <th>Alamat</th>
+          <th>Kontak</th>
+          <th>Website</th>
+          <th>Star</th>
+        </tr>
+      </thead>
+      <tbody id="result-table"></tbody>
+    </table>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

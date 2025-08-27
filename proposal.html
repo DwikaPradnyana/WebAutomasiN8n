@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <a href="index.html">Scraping</a>
+        <a href="leads.html">Leads</a>
+        <a href="deals.html">Deals</a>
+        <a href="proposal.html" class="active">Proposal</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <form id="proposalForm">
+        <div class="form-group">
+          <label for="nomorSurat">Nomor Surat</label>
+          <input type="text" id="nomorSurat" placeholder="Nomor surat proposal..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="tanggal">Tanggal</label>
+          <input type="date" id="tanggal" required>
+        </div>
+
+        <div class="form-group">
+          <label for="namaPerusahaan">Nama Perusahaan</label>
+          <input type="text" id="namaPerusahaan" placeholder="Nama perusahaan..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <input type="text" id="alamat" placeholder="Alamat perusahaan..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan</label>
+          <textarea id="catatan" placeholder="Catatan tambahan..."></textarea>
+        </div>
+
+        <button type="submit">Kirim Proposal</button>
+      </form>
+
+      <!-- Status dan link dari n8n -->
+      <div id="statusMessage" class="status-message"></div>
+      <div id="docsLink"></div>
+      <div id="pdfLink"></div>
+    </section>
+  </main>
+
+  <script src="proposal.js"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background: #8b1538;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+header a:hover,
+header a.active {
+  background: #a91b42;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #8b1538;
+}
+
+.form-box {
+  display: flex;
+  gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
+.form-box input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-box input:focus {
+  outline: none;
+  border-color: #8b1538;
+}
+
+.form-box button {
+  padding: 8px 16px;
+  background: #8b1538;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.form-box button:hover {
+  background: #6b0f2a;
+}
+
+/* Form Container */
+.form-container {
+  background: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-grid div,
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  color: #8b1538;
+}
+
+/* Input Fields */
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+  outline: none;
+  border-color: #8b1538;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+input[readonly] {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* Buttons */
+button, 
+.btn-primary,
+.btn-submit {
+  background: #8b1538;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+button:hover, 
+.btn-primary:hover,
+.btn-submit:hover {
+  background: #6b0f2a;
+}
+
+/* Messages */
+.msg,
+.status-message {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#statusMessage.success {
+  background: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+}
+
+#statusMessage.error {
+  background: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+#docsLink, 
+#pdfLink {
+  background: #d9edf7;
+  color: #31708f;
+  border: 1px solid #bce8f1;
+  display: none;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: white;
+  border: 1px solid #ddd;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #8b1538;
+  font-size: 14px;
+  color: white;
+}
+
+table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* Card */
+.card {
+  background: inherit;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 20px;
+  }
+  
+  .form-box {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .form-container {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  header nav ul {
+    gap: 15px;
+  }
+  
+  header nav ul li a,
+  header > a {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  table {
+    font-size: 13px;
+  }
+  
+  table th,
+  table td {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  header > a {
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    max-width: 100px;
+  }
+  
+  .hero {
+    padding: 30px 15px;
+  }
+  
+  .hero h2 {
+    font-size: 18px;
+  }
+}
