@@ -62,7 +62,7 @@ section {
 .form-box {
   display: flex;
   gap: 8px;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 12px;
   background: #f8f8f8;
@@ -295,4 +295,5 @@ table tbody tr:hover {
   .hero h2 {
     font-size: 18px;
   }
+
 }
