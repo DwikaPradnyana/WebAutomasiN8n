@@ -6,8 +6,8 @@ document.getElementById("btnCari").addEventListener("click", sendData);
 async function sendData(){
   const name = document.getElementById("name").value;
   const location = document.getElementById("location").value;
-
-  const payload = { name, location };
+  const jumlah = document.getElementById("jumlah").value;
+  const payload = { name, location, jumlah };
   try {
     const res = await fetch(N8N_WEBHOOK, {
       method: "POST",
@@ -34,3 +34,4 @@ async function sendData(){
     console.error(err);
   }
 }
+
