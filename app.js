@@ -3,6 +3,10 @@ const N8N_WEBHOOK = "https://popular-native-gnu.ngrok-free.app/webhook/scraping"
 
 document.getElementById("btnCari").addEventListener("click", sendData);
 
+let allData = [];       // simpan semua hasil
+let currentPage = 1;    // halaman aktif
+let itemsPerPage = 10;   // tampilkan 10 baris per halaman
+
 async function sendData(){
   const name = document.getElementById("name").value;
   const location = document.getElementById("location").value;
@@ -16,22 +20,49 @@ async function sendData(){
     });
     const data = await res.json();
 
-    const tbody = document.getElementById("result-table");
-    tbody.innerHTML = "";
-
-    data.forEach(item=>{
-      const row = `<tr>
-        <td>${item.title || item['Nama Hotel']}</td>
-        <td>${item.address || item['Alamat']}</td>
-        <td>${item.phone || item['Nomor Telepon']}</td>
-        <td><a href="${item.website}" target="_blank">${item.website||""}</a></td>
-        <td>${item.hotelStars||item['Star']}</td>
-      </tr>`;
-      tbody.innerHTML += row;
-    });
+    allData = data;   // simpan semua hasil
+    currentPage = 1;  // reset ke halaman pertama
+    renderPage();
   } catch(err){
     alert("Gagal ambil data dari n8n");
     console.error(err);
   }
 }
 
+function renderPage(){
+  const tbody = document.getElementById("result-table");
+  tbody.innerHTML = "";
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = allData.slice(start, end);
+
+  pageItems.forEach(item=>{
+    const row = `<tr>
+      <td>${item.title || item['Nama Hotel']}</td>
+      <td>${item.address || item['Alamat']}</td>
+      <td>${item.phone || item['Nomor Telepon']}</td>
+      <td><a href="${item.website}" target="_blank">${item.website||""}</a></td>
+      <td>${item.hotelStars||item['Star']}</td>
+    </tr>`;
+    tbody.innerHTML += row;
+  });
+
+  // Update info halaman
+  document.getElementById("pageInfo").textContent = 
+    `Page ${currentPage} of ${Math.ceil(allData.length / itemsPerPage)}`;
+}
+
+function nextPage(){
+  if(currentPage < Math.ceil(allData.length / itemsPerPage)){
+    currentPage++;
+    renderPage();
+  }
+}
+
+function prevPage(){
+  if(currentPage > 1){
+    currentPage--;
+    renderPage();
+  }
+}
