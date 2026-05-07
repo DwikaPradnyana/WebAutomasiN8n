@@ -1,4 +1,4 @@
-const N8N_LEADS_WEBHOOK = "https://n8n-yy2qhejc326s.tomat.sumopod.my.id/webhook/leads"; // ganti URL n8n
+const N8N_LEADS_WEBHOOK = "https://n8n-yy2qhejc326s.tomat.sumopod.my.id/webhook/proposal"; // ganti URL n8n
 
 document.getElementById("leadsForm")?.addEventListener("submit", async function(e) {
   e.preventDefault();
