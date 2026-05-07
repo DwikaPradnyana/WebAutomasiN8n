@@ -1,5 +1,5 @@
 // Ganti dengan webhook URL dari n8n
-const N8N_WEBHOOK = "https://popular-native-gnu.ngrok-free.app/webhook/scraping";
+const N8N_WEBHOOK = "https://n8n-yy2qhejc326s.tomat.sumopod.my.id/webhook/scraping2";
 
 document.getElementById("btnCari").addEventListener("click", sendData);
 
