@@ -43,7 +43,7 @@ document.getElementById("dealsForm").addEventListener("submit", function(e) {
     tanggalSelesai: tglSelesai.toISOString().split("T")[0]
   };
 
-  fetch("https://popular-native-gnu.ngrok-free.app/webhook/deals", {
+  fetch("https://n8n-yy2qhejc326s.tomat.sumopod.my.id/webhook/deals", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
