@@ -9,7 +9,7 @@ document.getElementById("proposalForm").addEventListener("submit", function(e) {
     catatan: document.getElementById("catatan").value,
   };
 
-  fetch("https://popular-native-gnu.ngrok-free.app/webhook/proposal", {
+  fetch("https://n8n-yy2qhejc326s.tomat.sumopod.my.id/webhook/proposal", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
